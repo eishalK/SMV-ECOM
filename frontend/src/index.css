@@ -1,0 +1,11 @@
+@import "tailwindcss"; 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add this to match the image's clean look */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
