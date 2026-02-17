@@ -2,8 +2,12 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
     try{
-        const conn = await mongoose.connect(process.env.MONGO_URI)
-        console.log(`MongoDB Connected: ${conn.connection.host}`)
+        const conn = await mongoose.connect(process.env.MONGO_URI, {
+            dbName: 'multi_ecommerce',
+        });
+       
+        console.log(`MongoDB Connected: ${conn.connection.host}`);
+        console.log(`Active Database: ${conn.connection.name}`);
         
     }
     catch (error) {
